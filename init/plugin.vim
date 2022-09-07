@@ -1,8 +1,7 @@
 call plug#begin()
 
 " 主题
-Plug 'kristijanhusak/vim-hybrid'
-Plug 'kristijanhusak/vim-hybrid-material'
+Plug 'morhetz/gruvbox'
 
 " 状态栏
 Plug 'vim-airline/vim-airline'
@@ -24,10 +23,9 @@ call plug#end()
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-
 " 主题
 set background=dark
-colorscheme hybrid_material
+colorscheme gruvbox
 
 " FZF 配置
 let g:fzf_preview_window = ['right:50%', 'ctrl-/']

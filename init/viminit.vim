@@ -23,6 +23,11 @@ set nobackup                    "  不创建备份文件
 set nowritebackup               "  不创建备份文件
 set noswapfile                  "  不创建交换文件
 set undofile                    "  保留撤销历史
+if has('nvim')
+    set undodir=~/.vim/.undo//
+else
+    set undodir=~/.local/share/nvim/.undo//
+endif
 
 " 显示配置
 syntax enable                   "  语法高亮
@@ -39,7 +44,7 @@ set signcolumn=yes             "  展示标号栏，否则展示标记时会移�
 
 " 编辑配置
 set autoindent                  "  自动缩进
-set autochdir                   "  自动将工作目录切换到当前文件
+"set autochdir                  "  自动将工作目录切换到当前文件
 set autoread                    "  自动读取文件变更
 set smartindent                 "  智能缩进
 set expandtab                   "  TAB 转为空格

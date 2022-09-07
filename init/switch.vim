@@ -9,3 +9,7 @@ nnoremap ]ow :setl nowrap<cr>
 " 当前行
 nnoremap [oc :setl cursorline<cr>
 nnoremap ]oc :setl nocursorline<cr>
+
+" 当前目录
+nnoremap [acd :setl autochdir<cr>
+nnoremap ]acd :setl noautochdir<cr>
