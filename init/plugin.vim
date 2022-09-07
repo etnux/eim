@@ -28,7 +28,7 @@ set background=dark
 colorscheme gruvbox
 
 " FZF 配置
-let g:fzf_preview_window = ['right:50%', 'ctrl-/']
+"let g:fzf_preview_window = ['right:50%', 'ctrl-/']
 let g:fzf_buffers_jump = 1
 let g:fzf_action = {
   \ 'ctrl-t': 'tab split',

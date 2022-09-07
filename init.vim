@@ -13,3 +13,4 @@ IncScript init/viminit.vim
 IncScript init/keymap.vim
 IncScript init/switch.vim
 IncScript init/plugin.vim
+IncScript init/coc.vim
