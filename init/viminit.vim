@@ -1,7 +1,7 @@
 " 基本配置
+set nocompatible                "  不兼容VI
 filetype plugin indent on       "  文件类型检测与加载插件
 set helplang=cn                 "  中文帮助文档
-set nocompatible                "  不兼容VI
 set mouse=a                     "  鼠标启用
 set history=1000                "  记录历史操作数量
 set autoread                    "  检测文件改变
@@ -19,9 +19,6 @@ endif
 set fileencodings=ucs-bom,utf-8,gbk,gb18030,big5,euc-jp,latin1 
 
 " 记录配置
-set backupdir=~/.vim/.backup//
-set directory=~/.vim/.swp//
-set undodir=~/.vim/.undo//
 set nobackup                    "  不创建备份文件
 set nowritebackup               "  不创建备份文件
 set noswapfile                  "  不创建交换文件
@@ -42,6 +39,8 @@ set signcolumn=yes             "  展示标号栏，否则展示标记时会移�
 
 " 编辑配置
 set autoindent                  "  自动缩进
+set autochdir                   "  自动将工作目录切换到当前文件
+set autoread                    "  自动读取文件变更
 set smartindent                 "  智能缩进
 set expandtab                   "  TAB 转为空格
 set shiftwidth=4                "  缩进空格数
@@ -49,7 +48,6 @@ set tabstop=4                   "  TAB 键空格数
 set softtabstop=4               "  TAB 转空格数
 set backspace=indent,eol,start  "  允许在插入模式下对所有内容退格删除
 set scrolloff=4                 "  光标上下最小行数
-set autochdir                   "  自动将工作目录切换到当前文件
 set hidden                      "  允许未保存时切换缓冲区
 
 " 搜索配置

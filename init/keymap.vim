@@ -1,3 +1,7 @@
+" 快捷键前缀 
+let mapleader="'"
+let g:mapleader="'"
+
 " 移动增强
 noremap <C-h> <Left>
 noremap <C-j> <Down>
@@ -23,9 +27,9 @@ noremap <silent>\bl :ls<cr>
 noremap <silent>\bb :ls<cr>:b
 
 " 标签
-noremap <silent>\tc :tabnew<cr>
-noremap <silent>\tq :tabclose<cr>
-noremap <silent>\tn :tabnext<cr>
+noremap <silent>\tn :tabnew<cr>
+noremap <silent>\tc :tabclose<cr>
+noremap <silent>\tt :tabnext<cr>
 noremap <silent>\tp :tabprev<cr>
 noremap <silent>\to :tabonly<cr>
 noremap <silent>\th :-tabmove<cr>
@@ -65,3 +69,4 @@ noremap <silent>\6 :6wincmd w<cr>
 noremap <silent>\7 :7wincmd w<cr>
 noremap <silent>\8 :8wincmd w<cr>
 noremap <silent>\9 :9wincmd w<cr>
+

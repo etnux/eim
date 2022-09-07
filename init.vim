@@ -12,3 +12,4 @@ exec 'set rtp+=~/.vim'
 IncScript init/viminit.vim
 IncScript init/keymap.vim
 IncScript init/switch.vim
+IncScript init/plugin.vim
