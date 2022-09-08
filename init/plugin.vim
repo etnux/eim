@@ -19,6 +19,9 @@ endif
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 
+" 记账
+Plug 'etnux/vim-beancount', { 'for': 'bean' }
+
 call plug#end()
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -31,9 +34,9 @@ colorscheme gruvbox
 "let g:fzf_preview_window = ['right:50%', 'ctrl-/']
 let g:fzf_buffers_jump = 1
 let g:fzf_action = {
-  \ 'ctrl-t': 'tab split',
-  \ 'ctrl-h': 'split',
-  \ 'ctrl-v': 'vsplit' }
+            \ 'ctrl-t': 'tab split',
+            \ 'ctrl-h': 'split',
+            \ 'ctrl-v': 'vsplit' }
 "" FZF 绑定
 nnoremap <silent> <c-p> :Files<CR>
 nnoremap <silent> <leader>fg :Rg<CR>
