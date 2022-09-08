@@ -1,7 +1,36 @@
+" 插件列表
+let g:coc_global_extensions  = ['coc-marketplace', 'coc-vimlsp',]           " 基础插件
+let g:coc_global_extensions += ['coc-prettier', 'coc-git',]                 " 通用
+let g:coc_global_extensions += ['coc-json', 'coc-yaml', 'coc-protobuf',]    " 序列化文件
+let g:coc_global_extensions += ['coc-sh',]                                  " SRE
+let g:coc_global_extensions += ['coc-sql',]                                 " Backend
+let g:coc_global_extensions += ['coc-html', 'coc-css',]                     " Frontend
+let g:coc_global_extensions += ['coc-tsserver',]                            " JavaScript
+let g:coc_global_extensions += ['coc-go',]                                  " Golang
+let g:coc_global_extensions += ['coc-rust-analyzer',]                       " Rust
+let g:coc_global_extensions += ['coc-phpls', 'coc-php-cs-fixer',]           " PHP
+
+
 " Add (Neo)Vim's native statusline support.
 " NOTE: Please see `:h coc-status` for integrations with external plugins that
 " provide custom statusline: lightline.vim, vim-airline.
 set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
+
+" 格式化
+command! -nargs=0 Format :call CocActionAsync('format')
+
+function! CheckBackspace() abort
+    let col = col('.') - 1
+    return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
+
+function! ShowDocumentation()
+    if CocAction('hasProvider', 'hover')
+        call CocActionAsync('doHover')
+    else
+        call feedkeys('K', 'in')
+    endif
+endfunction
 
 " Use tab for trigger completion with characters ahead and navigate.
 " NOTE: There's always complete item selected by default, you may want to enable
@@ -34,53 +63,35 @@ endif
 
 " 文档展示
 nnoremap <silent><nowait> <space>k :call ShowDocumentation()<CR>
+
+" 插件与市场
+nnoremap <silent><nowait> <space>em  :<C-u>CocList marketplace<cr>
+nnoremap <silent><nowait> <space>ee  :<C-u>CocList extensions<cr>
+
 " 命令列表
-nnoremap <silent><nowait> <space>l  :<C-u>CocList <cr>
-" 重开列表 
-nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
+nnoremap <silent><nowait> <space>ll  :<C-u>CocList <cr>
+" 重开列表
+nnoremap <silent><nowait> <space>lr  :<C-u>CocListResume<CR>
+
 " 错误或者诊断
 nnoremap <silent><nowait> <space>aa  :<C-u>CocList diagnostics<cr>
 nnoremap <silent><nowait> <space>a[ <Plug>(coc-diagnostic-prev)
 nnoremap <silent><nowait> <space>a] <Plug>(coc-diagnostic-next)
-" 插件与市场
-nnoremap <silent><nowait> <space>m  :<C-u>CocList marketplace<cr>
-nnoremap <silent><nowait> <space>e  :<C-u>CocList extensions<cr>
+
 " 命令列表
-nnoremap <silent><nowait> <space>c  :<C-u>CocList commands<cr>
+nnoremap <silent><nowait> <space>sc  :<C-u>CocList commands<cr>
 " 结构跳转
-nnoremap <silent><nowait> <space>o  :<C-u>CocList outline<cr>
+nnoremap <silent><nowait> <space>so  :<C-u>CocList outline<cr>
 " 符号搜索
-nnoremap <silent><nowait> <space>s  :<C-u>CocList -I symbols<cr>
+nnoremap <silent><nowait> <space>ss  :<C-u>CocList -I symbols<cr>
+
 " 下一个条目
 nnoremap <silent><nowait> <space>j  :<C-u>CocNext<CR>
 " 上一个条目
 nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
 
-" 格式化
-command! -nargs=0 Format :call CocActionAsync('format')
-
-function! CheckBackspace() abort
-    let col = col('.') - 1
-    return !col || getline('.')[col - 1]  =~# '\s'
-endfunction
-
-function! ShowDocumentation()
-    if CocAction('hasProvider', 'hover')
-        call CocActionAsync('doHover')
-    else
-        call feedkeys('K', 'in')
-    endif
-endfunction
-
-" 插件列表
-let g:coc_global_extensions  = ['coc-marketplace', 'coc-vimlsp',]           " 基础插件
-let g:coc_global_extensions += ['coc-prettier', 'coc-git',]                 " 通用
-let g:coc_global_extensions += ['coc-json', 'coc-yaml', 'coc-protobuf',]    " 序列化文件
-let g:coc_global_extensions += ['coc-sh',]                                  " SRE
-let g:coc_global_extensions += ['coc-sql',]                                 " Backend
-let g:coc_global_extensions += ['coc-html', 'coc-css',]                     " Frontend
-let g:coc_global_extensions += ['coc-tsserver',]                            " JavaScript
-let g:coc_global_extensions += ['coc-go',]                                  " Golang
-let g:coc_global_extensions += ['coc-rust-analyzer',]                       " Rust
-let g:coc_global_extensions += ['coc-phpls', 'coc-php-cs-fixer',]           " PHP
+" 代码动作
+nnoremap <silent><nowait> <space>ca <Plug>(coc-codeaction)
+" 代码修复
+nnoremap <silent><nowait> <space>cf <Plug>(coc-fix-current)
 
