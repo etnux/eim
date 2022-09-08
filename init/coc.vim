@@ -65,9 +65,8 @@ endif
 nnoremap <silent><nowait> <space>k :call ShowDocumentation()<CR>
 
 " 插件与市场
-nnoremap <silent><nowait> <space>em  :<C-u>CocList marketplace<cr>
-nnoremap <silent><nowait> <space>ee  :<C-u>CocList extensions<cr>
-
+nnoremap <silent><nowait> <space>lm  :<C-u>CocList marketplace<cr>
+nnoremap <silent><nowait> <space>le  :<C-u>CocList extensions<cr>
 " 命令列表
 nnoremap <silent><nowait> <space>ll  :<C-u>CocList <cr>
 " 重开列表
