@@ -38,7 +38,8 @@ let g:fzf_action = {
             \ 'ctrl-h': 'split',
             \ 'ctrl-v': 'vsplit' }
 "" FZF 绑定
-nnoremap <silent> <c-p> :Files<CR>
+nnoremap <silent> <c-p> :GFiles<CR>
+nnoremap <silent> <leader>ff :Files<CR>
 nnoremap <silent> <leader>fg :Rg<CR>
 nnoremap <silent> <leader>ft :Tags<CR>
 nnoremap <silent> <leader>fb :Buffers<CR>

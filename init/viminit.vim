@@ -39,7 +39,7 @@ set showmatch                   "  高亮匹配的括号
 set showcmd                     "  显示当前指令
 set nowrap                      "  禁止折行
 set showcmd                     "  展示操作命令
-set signcolumn=yes             "  展示标号栏，否则展示标记时会移动文本
+set signcolumn=yes              "  展示标号栏，否则展示标记时会移动文本
 "set visualbell                 "  出错发出视觉提示
 
 " 编辑配置
@@ -54,7 +54,8 @@ set softtabstop=4               "  TAB 转空格数
 set backspace=indent,eol,start  "  允许在插入模式下对所有内容退格删除
 set scrolloff=4                 "  光标上下最小行数
 set hidden                      "  允许未保存时切换缓冲区
-set clipboard=unnamedplus       "  使用系统剪贴板
+"  使用系统剪贴板
+set clipboard=unnamed,unnamedplus       
 
 " 搜索配置
 set hlsearch                    "  高亮搜索结果

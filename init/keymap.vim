@@ -45,9 +45,9 @@ noremap <silent><tab>7 :tabn 7<cr>
 noremap <silent><tab>8 :tabn 8<cr>
 noremap <silent><tab>9 :tabn 9<cr>
 noremap <silent><tab>0 :tabn 10<cr>
-noremap <silent><s-tab> :tabnext<cr>
-inoremap <silent><s-tab> <esc>:tabnext<cr>
 noremap <silent><tab><tab> :tabnext<cr>
+noremap <silent><s-tab> :tabprev<cr>
+inoremap <silent><s-tab> <esc>:tabprev<cr>
 
 " 窗口
 noremap <silent>\ww <c-w>w
