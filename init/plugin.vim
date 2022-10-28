@@ -21,6 +21,7 @@ Plug 'junegunn/fzf.vim'
 
 " 目录浏览
 Plug 'preservim/nerdtree'
+Plug 'francoiscabrol/ranger.vim'
 
 " 记账
 Plug 'etnux/vim-beancount', { 'for': 'bean' }
@@ -62,3 +63,8 @@ autocmd BufEnter * if winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTa
 " 同步 nerdtree
 autocmd BufWinEnter * if getcmdwintype() == '' | silent NERDTreeMirror | endif
 
+" ranger
+let g:ranger_map_keys = 0 " disable default <leader>f
+let g:NERDTreeHijackNetrw = 0 " add this line if you use NERDTree
+let g:ranger_replace_netrw = 1 " open ranger when vim open a directory
+noremap <leader>ll :Ranger<CR>

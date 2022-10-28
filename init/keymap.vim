@@ -2,6 +2,9 @@
 let mapleader="'"
 let g:mapleader="'"
 
+" Reload Vimrc
+nnoremap <leader>ro :source $MYVIMRC<CR>
+
 " 移动增强
 noremap <C-h> <Left>
 noremap <C-j> <Down>
