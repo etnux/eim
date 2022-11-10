@@ -54,8 +54,6 @@ set softtabstop=4               "  TAB 转空格数
 set backspace=indent,eol,start  "  允许在插入模式下对所有内容退格删除
 set scrolloff=4                 "  光标上下最小行数
 set hidden                      "  允许未保存时切换缓冲区
-"  使用系统剪贴板
-set clipboard=unnamed,unnamedplus       
 
 " 搜索配置
 set hlsearch                    "  高亮搜索结果

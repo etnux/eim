@@ -3,7 +3,12 @@ let mapleader="'"
 let g:mapleader="'"
 
 " Reload Vimrc
-nnoremap <leader>ro :source $MYVIMRC<CR>
+nnoremap <leader>vr :source $MYVIMRC<CR>
+
+" 系统剪贴板
+map <leader>y "+y
+map <leader>p "+p
+map <leader>d "+d
 
 " 移动增强
 noremap <C-h> <Left>

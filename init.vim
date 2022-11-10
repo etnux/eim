@@ -13,4 +13,8 @@ IncScript init/viminit.vim
 IncScript init/keymap.vim
 IncScript init/switch.vim
 IncScript init/plugin.vim
-IncScript init/coc.vim
+
+" coc 相关配置
+IncScript coc/extensions.vim
+IncScript coc/config.vim
+IncScript coc/keymap.vim

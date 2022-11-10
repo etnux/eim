@@ -26,6 +26,12 @@ Plug 'francoiscabrol/ranger.vim'
 " 记账
 Plug 'etnux/vim-beancount', { 'for': 'bean' }
 
+" 括号补全
+Plug 'jiangmiao/auto-pairs'
+
+" 对其
+Plug 'junegunn/vim-easy-align'
+
 call plug#end()
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -38,7 +44,7 @@ colorscheme gruvbox
 "let g:fzf_preview_window = ['right:50%', 'ctrl-/']
 let g:fzf_buffers_jump = 1
 let g:fzf_action = {
-            \ 'ctrl-t': 'tab split',
+            \ 'ctrl-e': 'tab split',
             \ 'ctrl-h': 'split',
             \ 'ctrl-v': 'vsplit' }
 "" FZF 绑定

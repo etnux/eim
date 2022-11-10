@@ -1,37 +1,3 @@
-" 插件列表
-let g:coc_global_extensions  = ['coc-marketplace', 'coc-vimlsp',]           " 基础插件
-let g:coc_global_extensions += ['coc-prettier', 'coc-git',]                 " 通用
-let g:coc_global_extensions += ['coc-json', 'coc-yaml', 'coc-protobuf',]    " 序列化文件
-let g:coc_global_extensions += ['coc-sh',]                                  " SRE
-let g:coc_global_extensions += ['coc-sql',]                                 " Backend
-let g:coc_global_extensions += ['coc-html', 'coc-css',]                     " Frontend
-let g:coc_global_extensions += ['coc-tsserver',]                            " JavaScript
-let g:coc_global_extensions += ['coc-go',]                                  " Golang
-let g:coc_global_extensions += ['coc-rust-analyzer',]                       " Rust
-let g:coc_global_extensions += ['coc-phpls', 'coc-php-cs-fixer',]           " PHP
-
-
-" Add (Neo)Vim's native statusline support.
-" NOTE: Please see `:h coc-status` for integrations with external plugins that
-" provide custom statusline: lightline.vim, vim-airline.
-set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
-
-" 格式化
-command! -nargs=0 Format :call CocActionAsync('format')
-
-function! CheckBackspace() abort
-    let col = col('.') - 1
-    return !col || getline('.')[col - 1]  =~# '\s'
-endfunction
-
-function! ShowDocumentation()
-    if CocAction('hasProvider', 'hover')
-        call CocActionAsync('doHover')
-    else
-        call feedkeys('K', 'in')
-    endif
-endfunction
-
 " Use tab for trigger completion with characters ahead and navigate.
 " NOTE: There's always complete item selected by default, you may want to enable
 " no select by `"suggest.noselect": true` in your configuration file.
@@ -93,4 +59,3 @@ nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
 nnoremap <silent><nowait> <space>ca <Plug>(coc-codeaction)
 " 代码修复
 nnoremap <silent><nowait> <space>cf <Plug>(coc-fix-current)
-
