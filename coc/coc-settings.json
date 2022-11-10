@@ -1,0 +1,15 @@
+{
+  "suggest.noselect": true,
+  "suggest.enablePreselect": false,
+  "suggest.enablePreview": true,
+  "prettier.singleQuote": true,
+  "coc.preferences.formatOnSaveFiletypes": ["*"],
+  "languageserver": {
+    "golang": {
+      "command": "gopls",
+      "rootPatterns": ["go.mod"],
+      "trace.server": "verbose",
+      "filetypes": ["go"]
+    }
+  }
+}

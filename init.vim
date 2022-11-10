@@ -15,6 +15,7 @@ IncScript init/switch.vim
 IncScript init/plugin.vim
 
 " coc 相关配置
+let g:coc_config_home = fnameescape(s:home . "/coc")
 IncScript coc/extensions.vim
 IncScript coc/config.vim
 IncScript coc/keymap.vim
