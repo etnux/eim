@@ -1,40 +1,35 @@
 call plug#begin()
 
-" 主题
+" 界面相关
 Plug 'morhetz/gruvbox'
-
-" 状态栏
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
-" 快速移动
+" 编辑相关
 Plug 'easymotion/vim-easymotion'
+Plug 'jiangmiao/auto-pairs'
+Plug 'junegunn/vim-easy-align'
 
 " 自动补全
 if v:version > 800
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
 endif
 
-" 模糊搜索
+" 文件跳转
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
-
-" 目录浏览
 Plug 'preservim/nerdtree'
 Plug 'francoiscabrol/ranger.vim'
 
-" 记账
+" 项目管理
+Plug 'tpope/vim-fugitive'
+
+" 其他工具
 Plug 'etnux/vim-beancount', { 'for': 'bean' }
-
-" 括号补全
-Plug 'jiangmiao/auto-pairs'
-
-" 对其
-Plug 'junegunn/vim-easy-align'
 
 call plug#end()
 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " 主题
 set background=dark
@@ -47,7 +42,7 @@ let g:fzf_action = {
             \ 'ctrl-e': 'tab split',
             \ 'ctrl-h': 'split',
             \ 'ctrl-v': 'vsplit' }
-"" FZF 绑定
+" FZF 绑定
 nnoremap <silent> <c-p> :GFiles<CR>
 nnoremap <silent> <leader>ff :Files<CR>
 nnoremap <silent> <leader>fg :Rg<CR>
