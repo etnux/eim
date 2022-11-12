@@ -2,14 +2,19 @@
   "suggest.noselect": true,
   "suggest.enablePreselect": false,
   "suggest.enablePreview": true,
-  "prettier.singleQuote": true,
   "coc.preferences.formatOnSaveFiletypes": ["*"],
+  "prettier.disableLanguages": ["yaml"],
   "languageserver": {
     "golang": {
       "command": "gopls",
       "rootPatterns": ["go.mod"],
       "trace.server": "verbose",
       "filetypes": ["go"]
+    },
+    "nginx-language-server": {
+      "command": "nginx-language-server",
+      "filetypes": ["nginx"],
+      "rootPatterns": ["nginx.conf", ".git"]
     }
   }
 }

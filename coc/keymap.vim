@@ -59,3 +59,6 @@ nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
 nnoremap <silent><nowait> <space>ca <Plug>(coc-codeaction)
 " 代码修复
 nnoremap <silent><nowait> <space>cf <Plug>(coc-fix-current)
+" 重命名
+nnoremap <silent><nowait> <space>rn <Plug>(coc-rename)
+

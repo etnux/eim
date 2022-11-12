@@ -9,6 +9,8 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'easymotion/vim-easymotion'
 Plug 'jiangmiao/auto-pairs'
 Plug 'junegunn/vim-easy-align'
+Plug 'tpope/vim-surround'
+Plug 'sheerun/vim-polyglot'
 
 " 自动补全
 if v:version > 800
@@ -21,8 +23,9 @@ Plug 'junegunn/fzf.vim'
 Plug 'preservim/nerdtree'
 Plug 'francoiscabrol/ranger.vim'
 
-" 项目管理
+" 软件工程
 Plug 'tpope/vim-fugitive'
+Plug 'vim-test/vim-test'
 
 " 其他工具
 Plug 'etnux/vim-beancount', { 'for': 'bean' }
@@ -69,3 +72,20 @@ let g:ranger_map_keys = 0 " disable default <leader>f
 let g:NERDTreeHijackNetrw = 0 " add this line if you use NERDTree
 let g:ranger_replace_netrw = 1 " open ranger when vim open a directory
 noremap <leader>ll :Ranger<CR>
+
+" ansible
+au BufRead,BufNewFile */playbooks/*.yml set filetype=yaml.ansible
+au BufRead,BufNewFile */ansible/*.yml set filetype=yaml.ansible
+" coc-ansible
+let g:coc_filetype_map = {
+  \ 'yaml.ansible': 'ansible',
+  \ }
+
+" coc-nginx
+augroup custom_nginx
+    autocmd!
+    autocmd FileType nginx setlocal iskeyword+=$
+    autocmd FileType nginx let b:coc_additional_keywords = ['$']
+augroup end
+
+
