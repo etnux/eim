@@ -8,7 +8,7 @@
     "golang": {
       "command": "gopls",
       "rootPatterns": ["go.mod"],
-      "trace.server": "verbose",
+      "trace.server": "off",
       "filetypes": ["go"]
     },
     "nginx-language-server": {

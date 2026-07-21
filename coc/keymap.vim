@@ -21,11 +21,7 @@ nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 
 " 补全提示
-if has('nvim')
-    inoremap <silent><expr> <c-g> coc#refresh()
-else
-    inoremap <silent><expr> <c-g> coc#refresh()
-endif
+inoremap <silent><expr> <c-g> coc#refresh()
 
 " 文档展示
 nnoremap <silent><nowait> <space>k :call ShowDocumentation()<CR>

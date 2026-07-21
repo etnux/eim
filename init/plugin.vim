@@ -13,7 +13,7 @@ Plug 'tpope/vim-surround'
 Plug 'sheerun/vim-polyglot'
 
 " 自动补全
-if v:version > 800
+if v:version >= 800
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
 endif
 

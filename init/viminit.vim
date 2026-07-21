@@ -24,9 +24,9 @@ set nowritebackup               "  不创建备份文件
 set noswapfile                  "  不创建交换文件
 set undofile                    "  保留撤销历史
 if has('nvim')
-    set undodir=~/.vim/.undo//
-else
     set undodir=~/.local/share/nvim/.undo//
+else
+    set undodir=~/.vim/.undo//
 endif
 
 " 显示配置
