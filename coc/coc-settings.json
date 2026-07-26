@@ -16,5 +16,6 @@
       "filetypes": ["nginx"],
       "rootPatterns": ["nginx.conf", ".git"]
     }
-  }
+  },
+  "snippets.ultisnips.pythonPrompt": false
 }
